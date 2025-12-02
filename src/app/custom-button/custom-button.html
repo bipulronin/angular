@@ -1,0 +1,17 @@
+<i *ngIf="data.button.showIcon;" class="pi pi-text"></i>
+@switch(data.button.showIcon) {
+  @case(true) {
+    NoValue
+  }
+  @case(false) {
+    Value
+  }
+  @default {
+    Default
+  }
+}
+<template #noicon>
+  <i class="pi pi-ban">No Icon</i>
+</template>
+
+{{ label}}

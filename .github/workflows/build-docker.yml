@@ -1,0 +1,12 @@
+name: "Script for deploying Angular-Docker app"
+run-name: "${{github.actor}} deploying latest UI changes on ${{github.action}}"
+on: [push]
+jobs:
+    create-anguar-app:
+        runs-on: 'ubuntu-latest'
+        steps:
+            - run: 'echo Checking out latest code'
+            - uses: actions/checkout@v5
+            - uses: actions/setup-node@v4
+            - run: npm install
+            - run: npm run build
